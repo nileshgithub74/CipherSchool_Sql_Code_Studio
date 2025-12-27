@@ -1,0 +1,20 @@
+/* Assignment Page Layout */
+.assignment {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  min-height: calc(100vh - 100px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+}

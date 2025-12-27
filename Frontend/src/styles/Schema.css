@@ -1,0 +1,75 @@
+.schema-section {
+  margin-bottom: 1.5rem;
+}
+
+.schema-section h2 {
+  font-size: 1.2rem;
+  color: #1f2937;
+  margin: 0 0 0.8rem 0;
+}
+
+.table-card {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.table-card h3 {
+  font-size: 1.1rem;
+  color: #1f2937;
+  margin: 0 0 0.8rem 0;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.table-card h4 {
+  font-size: 1rem;
+  color: #374151;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.columns {
+  margin-bottom: 1.5rem;
+}
+
+.column {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.column .name {
+  font-family: monospace;
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+.column .type {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.sample-data table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.sample-data th,
+.sample-data td {
+  padding: 0.5rem;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+}
+
+.sample-data th {
+  background: #f3f4f6;
+  font-weight: 600;
+  color: #374151;
+}
+
+.sample-data td {
+  color: #6b7280;
+}
