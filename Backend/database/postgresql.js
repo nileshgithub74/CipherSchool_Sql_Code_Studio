@@ -32,15 +32,15 @@ const createPool = () => {
     console.error('PostgreSQL pool error:', err);
   });
 
-  // Test connection on startup
+ 
   pool.connect()
     .then(client => {
-      console.log('✅ PostgreSQL connected successfully');
+      console.log(' PostgreSQL connected successfully');
       client.release();
     })
     .catch(err => {
-      console.error('❌ PostgreSQL connection failed:', err.message);
-      console.log('Using fallback mode - some features may be limited');
+      console.error('PostgreSQL connection failed:', err.message);
+      
     });
 
   return pool;
@@ -48,7 +48,7 @@ const createPool = () => {
 
 const pool = createPool();
 
-// Convert MongoDB data types to PostgreSQL types
+
 const convertDataType = (mongoType) => {
   const typeMap = {
     'STRING': 'TEXT',
@@ -60,7 +60,7 @@ const convertDataType = (mongoType) => {
   return typeMap[mongoType.toUpperCase()] || 'TEXT';
 };
 
-// Create user workspace with error handling
+
 export const createWorkspace = async (sessionId = null) => {
   const schemaId = sessionId || `workspace_${uuidv4().replace(/-/g, '_')}`;
   let client;
@@ -78,7 +78,7 @@ export const createWorkspace = async (sessionId = null) => {
   }
 };
 
-// Load assignment data into workspace with error handling
+
 export const loadAssignmentData = async (client, schemaId, sampleTables) => {
   try {
     await client.query(`SET search_path TO "${schemaId}"`);
@@ -115,7 +115,6 @@ export const loadAssignmentData = async (client, schemaId, sampleTables) => {
   }
 };
 
-// Execute user SQL query with error handling
 export const executeUserQuery = async (client, schemaId, query) => {
   try {
     await client.query(`SET search_path TO "${schemaId}"`);
@@ -136,7 +135,7 @@ export const executeUserQuery = async (client, schemaId, query) => {
   }
 };
 
-// Get schema information with error handling
+
 export const getSchemaInfo = async (client, schemaId) => {
   try {
     await client.query(`SET search_path TO "${schemaId}"`);

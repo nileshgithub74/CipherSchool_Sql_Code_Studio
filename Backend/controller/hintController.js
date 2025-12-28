@@ -7,7 +7,7 @@ export const getHint = async (req, res) => {
     const { assignmentId } = req.params;
     const { userQuery } = req.body;
 
-    // Get assignment details
+    
     const assignment = await Assignment.findById(assignmentId);
     if (!assignment) {
       return res.status(404).json({
@@ -16,7 +16,6 @@ export const getHint = async (req, res) => {
       });
     }
 
-    // Generate hint using Gemini AI
     const hintResult = await hintService.generateHint(
       assignment.question,
       userQuery,
