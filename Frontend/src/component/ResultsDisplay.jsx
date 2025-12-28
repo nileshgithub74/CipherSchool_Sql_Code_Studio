@@ -6,7 +6,7 @@ const ResultsDisplay = ({ results, validation }) => {
       {/* Validation Feedback */}
       {validation && (
         <div className={`validation ${validation.isCorrect ? 'success' : 'error'}`}>
-          <h4>{validation.isCorrect ? '✅ Correct!' : '❌ Incorrect'}</h4>
+          <h4>{validation.isCorrect ? ' Correct!' : ' Incorrect'}</h4>
           <p>{validation.message}</p>
         </div>
       )}
