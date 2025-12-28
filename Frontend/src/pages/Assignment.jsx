@@ -51,7 +51,7 @@ const Assignment = () => {
         }
       );
 
-      console.log("Assignment loaded:", response.data);
+      
 
       const { assignment, schemaId, tables = [] } = response.data.data;
 
@@ -65,6 +65,7 @@ const Assignment = () => {
 
   const executeQuery = async (query) => {
     try {
+      
       const executeResponse = await axios.post(
         `${API_CONFIG.BASE_URL}/sql/query/execute`,
         {
@@ -73,7 +74,8 @@ const Assignment = () => {
         }
       );
 
-      console.log("Query results:", executeResponse.data);
+      
+
       const { data: queryResults } = executeResponse.data;
       setResults(queryResults);
 
@@ -86,14 +88,12 @@ const Assignment = () => {
         }
       );
 
-      console.log("Validation results:", validateResponse.data);
       const { data: validationResults } = validateResponse.data;
       setValidation(validationResults);
 
       setShowResults(true);
     } catch (error) {
-      console.error("Error executing query:", error);
-      console.error("Error details:", error.response?.data || error.message);
+      console.log("Error executing query:", error);
     }
   };
 
