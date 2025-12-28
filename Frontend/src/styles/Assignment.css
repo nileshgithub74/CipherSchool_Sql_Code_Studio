@@ -72,7 +72,7 @@
   gap: 12px;
 }
 
-.reset-btn, .run-btn, .submit-btn {
+.reset-btn, .run-btn {
   padding: 8px 16px;
   border: 1px solid #dee2e6;
   border-radius: 4px;
@@ -102,15 +102,7 @@
   color: white;
 }
 
-.submit-btn {
-  background: #007bff;
-  color: white;
-  border-color: #007bff;
-}
 
-.submit-btn:hover {
-  background: #0056b3;
-}
 
 /* Main Content */
 .main-content {
@@ -334,7 +326,7 @@
     gap: 8px;
   }
   
-  .reset-btn, .run-btn, .submit-btn {
+  .reset-btn, .run-btn {
     padding: 6px 12px;
     font-size: 12px;
   }

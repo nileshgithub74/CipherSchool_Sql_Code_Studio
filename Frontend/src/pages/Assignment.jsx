@@ -102,7 +102,6 @@ const Assignment = () => {
         <div className="nav-right">
           <button className="reset-btn" onClick={resetQuery}>Reset</button>
           <button className="run-btn" onClick={executeQuery}>▶ Run Code</button>
-          <button className="submit-btn">Submit</button>
         </div>
       </div>
 
@@ -190,7 +189,7 @@ const Assignment = () => {
                   automaticLayout: true,
                   wordWrap: 'on',
                 }}
-                theme="vs-light"
+                theme="vs-dark"
               />
             </div>
           </div>
